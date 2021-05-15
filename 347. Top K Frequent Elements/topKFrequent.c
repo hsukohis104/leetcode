@@ -1,3 +1,5 @@
+
+
 /**
  * Note: The returned array must be malloced, assume caller calls free().
  */
@@ -35,7 +37,7 @@ int* topKFrequent(int* nums, int numsSize, int k, int* returnSize){
     for( int i = 0; i < max_count; i++ )
         bucket[i].num_count = 0;
     for( int i = 0; i < list_count; i++ )
-        bucket[list_arr[i].count-1].num[bucket[list_arr[i].count-1].num_count++] = list_arr[i].num;
+        bucket[list_arr[i].count-1].num[bucket[list_arr[i].count-1].num_count++] = list_arr[i].num; 
     int * answer = (int*)malloc(sizeof(int)*k);
     int index = max_count-1;
     int i = 0;
